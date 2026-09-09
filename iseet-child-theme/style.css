@@ -1,0 +1,110 @@
+/*
+Theme Name: ISEET Child Theme
+Theme URI: https://github.com/layankhayyat04-ui/iseet-wordpress-child-theme
+Description: A performance and accessibility focused child theme built on Twenty Twenty-Four. Adds responsive layout refinements, WCAG accessible UI components, Core Web Vitals optimizations, and a REST API powered "Latest Posts" block.
+Author: Layan Khayyat
+Author URI: https://github.com/layankhayyat04-ui
+Template: twentytwentyfour
+Version: 1.0.0
+Text Domain: iseet-child-theme
+*/
+
+/* ==========================================================================
+   Accessibility: visible focus states (WCAG 2.4.7)
+   Twenty Twenty-Four's default focus ring is too faint on several elements.
+   ========================================================================== */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+.wp-block-button__link:focus-visible {
+    outline: 3px solid #0b5fff;
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* Skip link — hidden until focused, required for keyboard navigation (WCAG 2.4.1) */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 999999;
+    background: #0b5fff;
+    color: #fff;
+    padding: 0.75rem 1.25rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+}
+
+/* ==========================================================================
+   Accessibility: color contrast fix
+   Muted text in the default theme fails WCAG AA (3.9:1) at small sizes.
+   ========================================================================== */
+.has-muted-color,
+.wp-block-post-date,
+.wp-block-post-author {
+    color: #595959; /* raises contrast against #ffffff to 7:1 (WCAG AAA) */
+}
+
+/* ==========================================================================
+   Responsive layout refinements
+   ========================================================================== */
+.iseet-latest-posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+    .iseet-latest-posts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .iseet-latest-posts {
+        grid-template-columns: 1fr;
+    }
+}
+
+.iseet-latest-posts__card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1rem;
+    background: #fff;
+}
+
+.iseet-latest-posts__card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.iseet-latest-posts__title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0.5rem 0 0.25rem;
+}
+
+.iseet-latest-posts__excerpt {
+    font-size: 0.9rem;
+    color: #595959;
+}
+
+/* ==========================================================================
+   Core Web Vitals: prevent layout shift (CLS) on the site logo / header image
+   ========================================================================== */
+.custom-logo,
+.site-logo img {
+    height: auto;
+    max-width: 100%;
+}
