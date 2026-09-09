@@ -1,68 +1,149 @@
-# ISEET WordPress Child Theme
+<div align="center">
+
+# 🧩 ISEET WordPress Child Theme
+
+<img src="https://raw.githubusercontent.com/layankhayyat04-ui/layankhayyat04-ui/main/assets/divider-cyan.svg" width="100%" height="3"/>
 
 <p>
-  <img src="https://img.shields.io/badge/WordPress-Child%20Theme-21759B?style=flat-square&logo=wordpress&logoColor=white" alt="WordPress child theme">
-  <img src="https://img.shields.io/badge/PHP-8.x-777BB4?style=flat-square&logo=php&logoColor=white" alt="PHP">
-  <img src="https://img.shields.io/badge/Accessibility-WCAG%202.1%20AA-8B5CF6?style=flat-square" alt="WCAG 2.1 AA">
-  <img src="https://img.shields.io/badge/Core%20Web%20Vitals-optimized-brightgreen?style=flat-square" alt="Core Web Vitals optimized">
+  <img src="https://img.shields.io/badge/WordPress-Child_Theme-21759B?style=for-the-badge&logo=wordpress&logoColor=white"/>
+  <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
 </p>
 
-A WordPress child theme built on **Twenty Twenty-Four**, focused on the exact things a front-end WordPress role needs: accessible UI components, responsive layout, Core Web Vitals optimization, and a small REST API powered feature.
+<p>
+  <img src="https://img.shields.io/badge/WCAG_2.1_AA-Accessible-8B5CF6?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Core_Web_Vitals-Optimized-2ea44f?style=flat-square"/>
+  <img src="https://img.shields.io/badge/REST_API-Powered-FF6B6B?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Build_Step-None_%E2%80%94_Vanilla_JS-0D1117?style=flat-square"/>
+</p>
 
----
+*A child theme built on **Twenty Twenty-Four**, focused on exactly what a front-end WordPress role needs day to day: accessible components, responsive layout, Core Web Vitals discipline, and a REST API powered feature.*
 
-## What's in it
+</div>
 
-### Accessibility (WCAG 2.1)
-- A skip-to-content link, hidden until keyboard-focused (WCAG 2.4.1 — Bypass Blocks)
-- Visible, high-contrast `:focus-visible` outlines on links, buttons, and form fields (WCAG 2.4.7)
-- Raised text color contrast on muted/secondary text from a failing ~3.9:1 to 7:1, passing WCAG AAA
-- Accessible `role="list"` / `role="listitem"` markup on the dynamic posts grid, with an `aria-label`
+<img src="https://raw.githubusercontent.com/layankhayyat04-ui/layankhayyat04-ui/main/assets/divider-gold.svg" width="100%" height="3"/>
 
-### Responsive layout
-- A 3 → 2 → 1 column CSS grid for the "Latest Posts" component, breakpointed for tablet and mobile
-- Fixed-aspect-ratio images (`aspect-ratio: 16/9`) so cards never distort at any width
+<details open>
+<summary><h2>📋 &nbsp;What's inside</h2></summary>
+<br>
 
-### Core Web Vitals
-- **CLS (layout shift):** post thumbnails get explicit `width`/`height` attributes added automatically, and the site logo is capped so it can't push content around while loading
-- **LCP (largest contentful paint):** the first image on a page is marked `loading="eager"` and `fetchpriority="high"`; every image after that is lazy-loaded automatically
-- **TBT (total blocking time):** the front-end script is enqueued in the footer with `defer` behavior and never blocks first paint
+<table width="100%">
+<tr>
+<td width="25%" valign="top" align="center">
 
-### REST API
-- A custom REST field (`iseet_featured_image_url`) added to the `wp/v2/posts` endpoint, so the front end gets a post's featured image in the same request instead of firing one extra call per post
-- A `[iseet_latest_posts]` shortcode that renders an empty, accessible container, then fills it client-side by fetching `wp/v2/posts` — keeping the initial page HTML small
+<h3>♿</h3>
+<h3><b>Accessibility</b></h3>
+<img src="https://img.shields.io/badge/WCAG_2.1-AA/AAA-8B5CF6?style=flat-square"/>
 
----
+<p align="left">
 
-## Project structure
+- Skip-to-content link (WCAG 2.4.1)
+- Visible `:focus-visible` outlines (WCAG 2.4.7)
+- Muted text contrast raised 3.9:1 → 7:1 (AAA)
+- `role="list"` / `aria-label` on dynamic content
+
+</p>
+
+</td>
+<td width="25%" valign="top" align="center">
+
+<h3>📐</h3>
+<h3><b>Responsive</b></h3>
+<img src="https://img.shields.io/badge/Mobile_First-2ea44f?style=flat-square"/>
+
+<p align="left">
+
+- 3 → 2 → 1 column CSS grid
+- Breakpoints at 768px and 480px
+- Fixed `aspect-ratio: 16/9` cards
+- Zero layout distortion at any width
+
+</p>
+
+</td>
+<td width="25%" valign="top" align="center">
+
+<h3>⚡</h3>
+<h3><b>Core Web Vitals</b></h3>
+<img src="https://img.shields.io/badge/CLS_%7C_LCP_%7C_TBT-optimized-2ea44f?style=flat-square"/>
+
+<p align="left">
+
+- Auto image `width`/`height` → no CLS
+- First image `fetchpriority="high"`
+- Rest lazy-loaded automatically
+- Scripts deferred, footer-loaded
+
+</p>
+
+</td>
+<td width="25%" valign="top" align="center">
+
+<h3>🔌</h3>
+<h3><b>REST API</b></h3>
+<img src="https://img.shields.io/badge/wp/v2/posts-custom_field-FF6B6B?style=flat-square"/>
+
+<p align="left">
+
+- Custom `iseet_featured_image_url` field
+- `[iseet_latest_posts]` shortcode
+- Client-side fetch, zero extra plugins
+- Small initial HTML payload
+
+</p>
+
+</td>
+</tr>
+</table>
+
+</details>
+
+<img src="https://raw.githubusercontent.com/layankhayyat04-ui/layankhayyat04-ui/main/assets/divider-magenta.svg" width="100%" height="3"/>
+
+<details open>
+<summary><h2>🗂️ &nbsp;Project structure</h2></summary>
+<br>
 
 ```
 iseet-child-theme/
-├── style.css              Child theme stylesheet — accessibility fixes, responsive grid, CLS prevention
-├── functions.php          Asset loading, accessibility helpers, Core Web Vitals filters, REST API field + shortcode
+├── style.css              Child theme stylesheet — accessibility, responsive grid, CLS prevention
+├── functions.php          Asset loading, accessibility helpers, Core Web Vitals filters, REST API + shortcode
 └── assets/
     └── js/
         └── latest-posts.js   Fetches and renders posts from the WordPress REST API
 ```
 
----
+</details>
 
-## How to use it
+<img src="https://raw.githubusercontent.com/layankhayyat04-ui/layankhayyat04-ui/main/assets/divider-red.svg" width="100%" height="3"/>
+
+<details>
+<summary><h2>🚀 &nbsp;How to use it</h2></summary>
+<br>
 
 1. Install and activate the parent theme, **Twenty Twenty-Four** (bundled with WordPress).
 2. Copy the `iseet-child-theme` folder into `wp-content/themes/`.
-3. Activate **ISEET Child Theme** from Appearance → Themes.
+3. Activate **ISEET Child Theme** from **Appearance → Themes**.
 4. Add `[iseet_latest_posts]` to any page or post to render the REST API powered grid.
 
----
+</details>
 
-## Tech stack
+<img src="https://raw.githubusercontent.com/layankhayyat04-ui/layankhayyat04-ui/main/assets/divider-cyan.svg" width="100%" height="3"/>
 
-PHP, JavaScript (vanilla, no build step), CSS, WordPress REST API, WordPress hooks/filters API
+<div align="center">
 
----
+### 🛠️ Tech stack
 
-## Author
+<img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white"/>
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"/>
+<img src="https://img.shields.io/badge/WordPress-21759B?style=for-the-badge&logo=wordpress&logoColor=white"/>
+<img src="https://img.shields.io/badge/REST_API-FF6B6B?style=for-the-badge&logo=fastapi&logoColor=white"/>
+
+<img src="https://raw.githubusercontent.com/layankhayyat04-ui/layankhayyat04-ui/main/assets/divider-gold.svg" width="100%" height="3"/>
 
 **Layan Khayyat**
 Business Information Technology student, Princess Sumaya University for Technology (PSUT)
+
+</div>
