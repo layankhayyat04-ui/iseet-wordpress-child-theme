@@ -1,8 +1,6 @@
 <div align="center">
 
-# 🧩 ISEET WordPress Child Theme
-
-<img src="https://raw.githubusercontent.com/layankhayyat04-ui/layankhayyat04-ui/main/assets/divider-cyan.svg" width="100%" height="3"/>
+<img width="100%" src="https://raw.githubusercontent.com/layankhayyat04-ui/iseet-wordpress-child-theme/main/assets/banner.svg" alt="ISEET Child Theme banner" />
 
 <p>
   <img src="https://img.shields.io/badge/WordPress-Child_Theme-21759B?style=for-the-badge&logo=wordpress&logoColor=white"/>
@@ -18,7 +16,7 @@
   <img src="https://img.shields.io/badge/Build_Step-None_%E2%80%94_Vanilla_JS-0D1117?style=flat-square"/>
 </p>
 
-*A child theme built on **Twenty Twenty-Four**, focused on exactly what a front-end WordPress role needs day to day: accessible components, responsive layout, Core Web Vitals discipline, and a REST API powered feature.*
+A child theme built on **Twenty Twenty-Four** covering accessible components, responsive layout, Core Web Vitals discipline, and a REST API powered feature.
 
 </div>
 
@@ -145,5 +143,9 @@ iseet-child-theme/
 
 **Layan Khayyat**
 Business Information Technology student, Princess Sumaya University for Technology (PSUT)
+
+<br/>
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=14&duration=3000&pause=1000&color=00D9FF&center=true&vCenter=true&width=500&lines=Thanks+for+stopping+by!" alt="Typing SVG" />
 
 </div>
